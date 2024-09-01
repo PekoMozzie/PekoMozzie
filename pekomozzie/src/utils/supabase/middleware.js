@@ -1,5 +1,5 @@
-import { createServerClient } from '@supabase/ssr'
-import { NextResponse } from 'next/server'
+import { createServerClient } from '@supabase/ssr';
+import { NextResponse } from 'next/server';
 
 export async function updateSession(request) {
   let supabaseResponse = NextResponse.next({
@@ -26,6 +26,13 @@ export async function updateSession(request) {
       },
     }
   )
+
+  const { data: { session }, error } = await supabase.auth.getSession();
+
+  if (error || !session) {
+    // Redirect to login if session is invalid or not found
+    return NextResponse.redirect(new URL('/', request.url));
+  }
 
   // refreshing the auth token
   await supabase.auth.getUser()

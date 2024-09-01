@@ -1,7 +1,4 @@
-'use client'
-
 import { login, signup } from './actions';
-import TestButton from './components/TestButton';
 
 export default function LoginPage() {
 
@@ -49,7 +46,6 @@ export default function LoginPage() {
           </button>
         </div>
       </form>
-      <TestButton />
     </div>
   );
 }
