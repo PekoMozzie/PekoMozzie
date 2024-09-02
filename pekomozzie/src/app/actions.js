@@ -17,7 +17,7 @@ export async function login(formData) {
   const {data, error} = await supabase.auth.signInWithPassword(loginData);
 
   if (error) {
-    redirect('/error')
+    redirect('/?modal=wrongCreds');
   }
 
   console.log(`${data.user.email} logged in`)
@@ -36,6 +36,9 @@ export async function signup(formData) {
   const { error } = await supabase.auth.signUp(data)
 
   if (error) {
-    redirect('/error')
+    redirect('/?modal=whoaThere')
   }
+
+  revalidatePath('/', 'layout');
+  redirect('/?modal=signedUp');
 }
