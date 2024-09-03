@@ -7,16 +7,38 @@ export default function LinkedIn() {
   async function signInWithLinkedIn() {
     const supabase = createClient();
 
-    const baseUrl = process.env.NEXT_PUBLIC_VERCEL_ENV === "production" ? `https://www.pekomozzie.com` : process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:3000`;
-    const redirectTo = `${baseUrl}/api/auth/callback`;
-    console.log('REDIRECT TO: ', redirectTo);
-
+    const getURL = () => {
+      let url =
+        process?.env?.NEXT_PUBLIC_SITE_URL ?? // Set this to your site URL in production env.
+        process?.env?.NEXT_PUBLIC_VERCEL_URL ?? // Automatically set by Vercel.
+        'http://localhost:3000/'
+      // Make sure to include `https://` when not localhost.
+      url = url.startsWith('http') ? url : `https://${url}`
+      // Make sure to include a trailing `/`.
+      url = url.endsWith('/') ? url : `${url}/`
+      url = url + 'api/auth/callback'
+      console.log("REDIRECT URL", url);
+      return url
+    }
+    
     const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: 'linkedin_oidc', 
+      provider: 'github',
       options: {
-        redirectTo,
+        redirectTo: getURL(),
       },
-    });
+    })
+    
+
+    // const baseUrl = process.env.NEXT_PUBLIC_VERCEL_ENV === "production" ? `https://www.pekomozzie.com` : process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` : `http://localhost:3000`;
+    // const redirectTo = `${baseUrl}/api/auth/callback`;
+    // console.log('REDIRECT TO: ', redirectTo);
+
+    // const { data, error } = await supabase.auth.signInWithOAuth({
+    //   provider: 'linkedin_oidc', 
+    //   options: {
+    //     redirectTo,
+    //   },
+    // });
     
     if (error) {
       console.error('Error during LinkedIn OAuth sign-in:', error.message);
