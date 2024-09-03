@@ -7,7 +7,7 @@ export default function LinkedIn() {
   async function signInWithLinkedIn() {
     const supabase = createClient();
 
-    const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3000';
+    const baseUrl = process.env.VERCEL_ENV === "production" ? `https://www.pekomozzie.com` : process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:3000`;
     const redirectTo = `${baseUrl}/api/auth/callback`;
 
     const { data, error } = await supabase.auth.signInWithOAuth({
