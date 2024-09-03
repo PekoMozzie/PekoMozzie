@@ -7,7 +7,7 @@ export async function GET(request) {
   const code = searchParams.get('code');
   console.log("Received code:", code);
   
-  const next = '/dashboard';
+  // const next = '/dashboard';
 
   if (code) {
     try {
@@ -17,16 +17,17 @@ export async function GET(request) {
       console.log("Supabase error:", error);
 
       if (!error) {
-        const forwardedHost = request.headers.get('x-forwarded-host');
-        const isLocalEnv = process.env.NODE_ENV === 'development';
+        return NextResponse.redirect(`${origin}/dashboard`)
+        // const forwardedHost = request.headers.get('x-forwarded-host');
+        // const isLocalEnv = process.env.NODE_ENV === 'development';
         
-        if (isLocalEnv) {
-          return NextResponse.redirect(`${origin}${next}`);
-        } else if (forwardedHost) {
-          return NextResponse.redirect(`https://${forwardedHost}${next}`);
-        } else {
-          return NextResponse.redirect(`${origin}${next}`);
-        }
+        // if (isLocalEnv) {
+        //   return NextResponse.redirect(`${origin}${next}`);
+        // } else if (forwardedHost) {
+        //   return NextResponse.redirect(`https://${forwardedHost}${next}`);
+        // } else {
+        //   return NextResponse.redirect(`${origin}${next}`);
+        // }
       } else {
         console.error("Error exchanging code for session:", error.message);
       }
