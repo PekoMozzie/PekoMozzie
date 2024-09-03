@@ -7,7 +7,7 @@ export async function GET(request) {
   const code = searchParams.get('code');
   console.log("Received code:", code);
   
-  // const next = '/dashboard';
+  const next = '/dashboard';
 
   if (code) {
     try {
