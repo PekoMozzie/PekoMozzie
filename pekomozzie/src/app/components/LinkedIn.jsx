@@ -9,6 +9,7 @@ export default function LinkedIn() {
 
     const baseUrl = process.env.NEXT_PUBLIC_VERCEL_ENV === "production" ? `https://www.pekomozzie.com` : process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.VERCEL_URL}` : `http://localhost:3000`;
     const redirectTo = `${baseUrl}/api/auth/callback`;
+    console.log('REDIRECT TO: ', redirectTo);
 
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'linkedin_oidc', 
