@@ -7,10 +7,13 @@ export default function LinkedIn() {
   async function signInWithLinkedIn() {
     const supabase = createClient();
 
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    const redirectTo = `${baseUrl}/api/auth/callback`;
+
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'linkedin_oidc', 
       options: {
-        redirectTo: `/api/auth/callback`,
+        redirectTo,
       },
     });
     
