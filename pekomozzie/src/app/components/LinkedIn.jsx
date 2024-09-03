@@ -22,7 +22,7 @@ export default function LinkedIn() {
     }
     
     const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: 'github',
+      provider: 'linkedin_oidc',
       options: {
         redirectTo: getURL(),
       },
