@@ -10,7 +10,7 @@ export default function LinkedIn() {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'linkedin_oidc', 
       options: {
-        redirectTo: `https://www.pekomozzie.com/api/auth/callback`,
+        redirectTo: `/api/auth/callback`,
       },
     });
     
