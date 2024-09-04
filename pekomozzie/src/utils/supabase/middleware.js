@@ -30,7 +30,7 @@ export async function updateSession(request) {
   const { data: { session }, error } = await supabase.auth.getSession();
 
   if (error || !session) {
-    console.log("OHSHIT NO SESSION")
+    console.log("NO SESSION")
     // Redirect to login if session is invalid or not found
     return NextResponse.redirect(new URL('/', request.url));
   }
