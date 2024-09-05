@@ -1,5 +1,6 @@
 import SignOut from './components/signOut';
 import { metadata } from '@/app/layout.js'
+import JobHistory from './components/JobHistory'
 
 export default function NavBar({ children }) {
   return (
@@ -28,6 +29,7 @@ export default function NavBar({ children }) {
         </div>
       </nav>
       <main>{children}</main>
+      <JobHistory/>
     </div>
   );
 

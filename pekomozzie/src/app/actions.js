@@ -34,7 +34,7 @@ export async function signup(formData) {
   }
 
   const { error } = await supabase.auth.signUp(data)
-
+  console.log(error)
   if (error) {
     redirect('/?modal=whoaThere')
   }
