@@ -1,9 +1,17 @@
+import AppForm from "./components/AppForm/AppForm";
+import Modal from '@/app/components/Modal';
 
- export default function Home () {
+ export default function Home ({searchParams}) {
+
+  const modal = searchParams?.modal;
+
+  console.log("MODAL", modal)
+
   return (
     <section className ="py-24">
       <div className="container">
-        <h1 className="text.3xl.font-b">PekoMozzie!</h1>
+        <AppForm />
+        {modal && <Modal modal={modal}/>}
       </div>
     </section>
   )
