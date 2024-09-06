@@ -1,6 +1,5 @@
 import SignOut from './components/SignOut';
 import { metadata } from '@/app/layout.js';
-import JobHistory from './components/JobHistory';
 import Image from "next/image";
 
 export default function NavBar({ children }) {
@@ -10,14 +9,10 @@ export default function NavBar({ children }) {
           <div className="container mx-auto flex justify-between items-center py-4">
             <a href="/dashboard"><Image src={metadata.logo} alt="PekoMozzie Logo" width="300" height="25" className="hover:"/></a>
             <ul className="flex space-x-4">
-              <li>
-                <a href="/goals" className="hover:underline">
-                  Account
-                </a>
-              </li>
-              <li>
-                <SignOut />
-              </li>
+              <li><a href="/dashboard/history" className="hover:text-black">History</a></li>
+              <li><a href="/dashboard/goal" className="hover:text-black">Goal</a></li>
+              <li><a className="hover:text-black">Account</a></li>
+              <li><SignOut /></li>
             </ul>
           </div>
         </nav>
