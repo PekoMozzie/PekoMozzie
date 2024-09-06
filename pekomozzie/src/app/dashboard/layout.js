@@ -1,4 +1,4 @@
-import SignOut from './components/SignOut.jsx';
+import SignOut from '@src/app/dashboard/components/SignOut.jsx';
 import { metadata } from '@/app/layout.js';
 import Image from "next/image";
 
