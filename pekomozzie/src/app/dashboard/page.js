@@ -1,13 +1,17 @@
-import HungryMeter from "../components/HungryMeter"
+import AppForm from "./components/AppForm/AppForm";
+import Modal from '@/app/components/Modal';
 
+ export default function Home ({searchParams}) {
 
+  const modal = searchParams?.modal;
 
-export default function Home () {
+  console.log("MODAL", modal)
+
   return (
     <section className ="py-24">
       <div className="container">
-        <h1 className="text.3xl.font-b">PekoMozzie!</h1>
-        <HungryMeter></HungryMeter>
+        <AppForm />
+        {modal && <Modal modal={modal}/>}
       </div>
     </section>
   )
