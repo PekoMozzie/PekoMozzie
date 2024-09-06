@@ -1,5 +1,6 @@
 import AppForm from "./components/AppForm/AppForm";
 import Modal from '@/app/components/Modal';
+import JobHistory from './components/JobHistory'
 
  export default function Home ({searchParams}) {
 
@@ -12,6 +13,7 @@ import Modal from '@/app/components/Modal';
       <div className="container">
         <AppForm />
         {modal && <Modal modal={modal}/>}
+        <JobHistory />
       </div>
     </section>
   )

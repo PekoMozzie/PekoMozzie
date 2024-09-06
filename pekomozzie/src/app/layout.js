@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-gray-300">
-        <nav className="bg-gray-500 text-white ">
+        {/* <nav className="bg-gray-500 text-white ">
           <div className="container mx-auto flex justify-between items-center py-4">
             <Image src={metadata.logo} alt="PekoMozzie Logo" width="300" height="25" className="hover:"/>
             <h1 className = "text-xl italic font-bold text-green-500 pr-2">{metadata.slogan}</h1>
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
               </li>
             </ul>
           </div>
-        </nav>
+        </nav> */}
         <main>{children}</main>
         </body>
     </html>
