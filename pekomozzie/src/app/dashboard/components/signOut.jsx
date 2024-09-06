@@ -1,7 +1,6 @@
 'use client'
 
 import { useRouter } from 'next/navigation';
-import { Logout } from '@mui/icons-material';
 
 const SignOut = () => {
   const router = useRouter();
@@ -27,7 +26,7 @@ const SignOut = () => {
   return (
     <div>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <button onClick={handleSignOut}><Logout className="hover:text-black"/></button>
+    <button onClick={handleSignOut}>Sign Out</button>
     </div>
   )
 };
