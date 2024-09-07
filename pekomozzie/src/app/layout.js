@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   logo: "/PekoMozzieLogo.png",
-  description: "PekoMozzie is a fun job application tracking tool featuring a cute, hungry pet monster.",
+  description: "The only monster that only eats job applications",
+  slogan: "It Cannot See It Cannot Think It Cannot Hear Or Feel, It Lives Only To Make Your Application Into It's Meal",
 };
 
 export default function RootLayout({ children }) {
@@ -18,7 +19,3 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
-
-
-
-// "It Cannot See It Cannot Think It Cannot Hear Or Feel, It Lives Only To Make Your Application Into It's Meal"
