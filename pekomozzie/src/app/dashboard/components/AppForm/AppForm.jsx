@@ -1,6 +1,6 @@
 import { feed } from './actions'; 
 import Modal from '@/app/components/Modal'
-import HungryMeter from '@/app/components/HungryMeter';
+
 
 const AppForm = ({ searchParams }) => {
   const modal = searchParams?.modal;
@@ -8,9 +8,8 @@ const AppForm = ({ searchParams }) => {
   return (
 
 
-    <div>
-      <HungryMeter></HungryMeter> 
-      <form className="flex flex-col items-center w-full max-w-sm p-6 space-y-4 bg-white border rounded-lg shadow-lg">
+      <div>
+      <form className="flex flex-col items-center w-72 max-w-sm p-6 space-y-4">
         <div className="w-full">
           <label htmlFor="company" className="block text-sm font-medium text-gray-700">Company:</label>
           <input
