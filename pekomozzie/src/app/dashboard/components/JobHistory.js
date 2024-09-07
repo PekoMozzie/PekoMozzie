@@ -20,10 +20,10 @@ export default function JobHistory() {
   return (
     <div className='mx-auto max-w-4xl p-6'>
       <h2 className='mb-6 text-center text-2xl font-bold'>
-        Job Application History
+        Past Meals
       </h2>
       <div className='overflow-x-auto'>
-        <table className='min-w-full border border-gray-200 text-left'>
+        <table className='min-w-full border overflow-scroll border-gray-200 text-left'>
           <thead className='bg-blue-500'>
             <tr>
               <th className='px-6 py-3 text-white'>Date</th>
