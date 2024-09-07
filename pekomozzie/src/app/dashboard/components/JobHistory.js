@@ -20,7 +20,7 @@ export default function JobHistory() {
   return (
     <div className='mx-auto max-w-4xl p-6'>
       <h2 className='mb-6 text-center text-2xl font-bold'>
-        Job Application History
+        Past Feasts
       </h2>
       <div className='overflow-x-auto'>
         <table className='min-w-full border border-gray-200 text-left'>
