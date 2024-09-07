@@ -53,7 +53,7 @@ export default function JobHistory() {
       </div>
 
       <div className='overflow-x-auto'>
-        <table className='min-w-full border border-gray-200 text-left'>
+        <table className='min-w-full border overflow-scroll border-gray-200 text-left'>
           <thead className='bg-blue-500'>
             <tr>
               <th className='px-6 py-3 text-white'>Date</th>

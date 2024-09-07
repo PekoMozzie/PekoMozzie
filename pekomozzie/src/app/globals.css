@@ -8,6 +8,9 @@
     background-position: center;
 
 }
+#hangryMeter {
+    
+}
 
 #appForm {
     left: 60%;
@@ -21,9 +24,39 @@
     width: 25%;
 }
 
-#happyPekoLookingUp {
-    position: relative;
-    height: 75%;
-    width: 75%;
-   
+#happyPekoLongEarsLookingUp{
+    position: absolute;
+    top: 75%;
+    left: 5%;
+    height: 45%;
+    width: 23%;
+    z-index: 10;
 }
+
+#peckishPeko3EyesLookingUp {
+    position: absolute;
+    top: 75%;
+    left: 25%;
+    height: 50%;
+    width: 33%;
+}
+
+#hungryPeko1EyeLookingUp {
+    position: absolute;
+    top: 75%;
+    left: 54%;
+    height: 50%;
+    width: 25%; 
+}
+
+#hangryDinoLookingUp {
+    position: absolute;
+    top: 75%;
+    left: 72%;
+    height: 50%;
+    width: 30%;
+
+}
+
+
+
