@@ -3,3 +3,21 @@
 @tailwind utilities;
 
 
+#appForm {
+    left: 60%;
+    top: 35%;
+}
+
+#happyPeko {
+    position: absolute;
+    top:40%;
+    height: 50%;
+    width: 25%;
+}
+
+#happyPekoLookingUp {
+    position: relative;
+    height: 75%;
+    width: 75%;
+   
+}

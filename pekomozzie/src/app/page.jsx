@@ -16,8 +16,8 @@ export default function LoginPage({ searchParams }) {
       <h1 className = "text-xl italic font-bold text-green-500 pr-2">To make your app into its meal</h1>
       <br></br>
       <br></br>
-      <div className="flex flex-col items-center w-full max-w-sm p-6 space-y-4 bg-white border rounded-lg shadow-lg">
-        <form className="flex flex-col items-center w-full max-w-sm p-6 space-y-4 bg-white border rounded-lg shadow-lg">
+      <div className="flex flex-col items-center w-full max-w-sm p-6 space-y-4 -mt-3 bg-white border rounded-lg shadow-lg">
+        {/* <form className="flex flex-col items-center w-full max-w-sm p-6 space-y-4 bg-white border rounded-lg shadow-lg">
           <div className="w-full">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email:</label>
             <input
@@ -60,7 +60,7 @@ export default function LoginPage({ searchParams }) {
           </div>
         </form>
         <br/>
-        Or
+        Or */}
         <LinkedIn />
       </div>
       {modal && <Modal modal={modal}/>}
