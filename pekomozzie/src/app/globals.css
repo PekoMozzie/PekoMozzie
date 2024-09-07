@@ -2,4 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+#loginPage {
+    background-image: url('../../public/login_background.png');
+    background-size: cover;
+    background-position: center;
+
+}
+
 
