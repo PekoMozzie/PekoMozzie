@@ -1,13 +1,19 @@
 import { login, signup } from './actions';
 import LinkedIn from './components/LinkedIn';
 import Modal from './components/Modal';
+import Image from "next/image";
 
 export default function LoginPage({ searchParams }) {
   const modal = searchParams?.modal;
 
   return (
-    <div className="flex h-screen justify-center items-center">
-      <div className="flex flex-col items-center w-full max-w-sm p-6 space-y-4 bg-white border rounded-lg shadow-lg">
+    <div id='loginPage' className="flex flex-col h-screen justify-center items-center">
+      <Image src="/PekoMozzieLogo.png" alt="PekoMozzie Logo" width="600" height="50" className="hover:"/>
+      <h1 className = "text-2xl font-bold text-black pr-2 login-intro">PekoMozzie is hungry for your success! </h1><br/>
+      <h2 className = "text-xl italic text-center  text-black pr-2 login-intro">Keep track of your job hunt <br/> by feeding your starving monster completed job apps</h2>
+      <br></br>
+      <br></br>
+      <div className="flex flex-col items-center w-full max-w-sm p-6 space-y-4 -mt-3 bg-white border rounded-lg shadow-lg">
         <form className="flex flex-col items-center w-full max-w-sm p-6 space-y-4 bg-white border rounded-lg shadow-lg">
           <div className="w-full">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email:</label>
