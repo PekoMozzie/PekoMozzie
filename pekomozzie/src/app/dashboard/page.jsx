@@ -10,11 +10,7 @@ import Modal from '@/app/components/Modal';
   return (
     <section className ="py-24">
       <div className="container">
-        <img id='happyPeko' src='/happyPeko.png' alt='PekoMozzie is content & full'/>
-        <img src='/placeSetting.png'alt='Cartoon Place Setting' className="top-9 h-96 w-[124] relative left-2/4"/>
-        <div id='appForm' className='absolute'>
-          <AppForm />
-        </div>
+        <AppForm />
         {modal && <Modal modal={modal}/>}
       </div>
     </section>

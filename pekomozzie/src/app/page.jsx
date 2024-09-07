@@ -7,10 +7,13 @@ export default function LoginPage({ searchParams }) {
   const modal = searchParams?.modal;
 
   return (
-    <div id='loginPage' className="flex flex-col h-screen justify-center items-center">
+    <div className="flex flex-col h-screen justify-center items-center">
       <Image src="/PekoMozzieLogo.png" alt="PekoMozzie Logo" width="600" height="50" className="hover:"/>
-      <h1 className = "text-2xl font-bold text-black pr-2 login-intro">PekoMozzie is hungry for your success! </h1><br/>
-      <h2 className = "text-xl italic text-center  text-black pr-2 login-intro">Keep track of your job hunt <br/> by feeding your starving monster completed job apps</h2>
+      <h1 className = "text-xl italic font-bold text-green-500 pr-2">It cannot see</h1>
+      <h1 className = "text-xl italic font-bold text-green-500 pr-2">It cannot think</h1>
+      <h1 className = "text-xl italic font-bold text-green-500 pr-2">It cannot hear or feel</h1>
+      <h1 className = "text-xl italic font-bold text-green-500 pr-2">It lives only</h1>
+      <h1 className = "text-xl italic font-bold text-green-500 pr-2">To make your app into its meal</h1>
       <br></br>
       <br></br>
       <div className="flex flex-col items-center w-full max-w-sm p-6 space-y-4 -mt-3 bg-white border rounded-lg shadow-lg">
