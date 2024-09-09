@@ -8,18 +8,28 @@
     background-position: center;
 
 }
-#hangryMeter {
+
+#hangryMeterTitle {
+    position:relative;
+    top: 2px;
+    width: 35%;
+    margin: 0 auto;
     
 }
 
+#hungryMeter {
+    border: solid black 5px;
+
+}
+
 #appForm {
-    left: 60%;
-    top: 35%;
+    left: 12%;
+    bottom: 61.5%;
 }
 
 #happyPeko {
     position: absolute;
-    top:40%;
+    top:45%;
     height: 50%;
     width: 25%;
 }
