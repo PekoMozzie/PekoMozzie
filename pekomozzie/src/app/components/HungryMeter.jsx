@@ -30,8 +30,8 @@ export default function HungryMeter() {
   useEffect(() => {
   }, [hungerData])
   return (
-    <div id='hangryMeter' className='mx-auto w-3/5 rounded-lg bg-red-700 p-4 text-center text-white shadow-lg'>
-      <h3 className='mb-1 text-xl'>Hangryness Level {hungerLevel()} </h3>
+    <div id='hungryMeter' className='mx-auto w-3/5 rounded-lg bg-red-700 p-4 text-center text-white shadow-lg'>
+      <h3 className='mb-1 text-xl'>PekoPeko Level {hungerLevel()} </h3>
     </div>
   )
 }
